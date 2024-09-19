@@ -1,0 +1,104 @@
+:root,
+:root::before,
+student,
+student::before {
+  display: block;
+}
+
+:root {
+  margin: 0 auto;
+  width: 1200px;
+  font: 700 16px 'Helvetica', sans-serif;
+}
+
+:root::before{
+  content: 'Student Information';
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 24px 0;
+}
+
+student::before{
+  content: '' attr(name) '';
+  font-size: 2rem;
+}
+
+first-name,
+middle-name,
+last-name,
+preferred-name,
+studentID,
+email,
+phone,
+academic-status,
+GPA,
+major,
+minor,
+enrollment-status,
+advisor,
+initial-enrollment-date,
+graduation-date {
+  display: block;
+  margin: 8px 0;
+  font: 400 14px 'Helvetica', sans-serif;
+}
+
+first-name::before {
+  content: 'First Name: ';
+}
+
+middle-name::before {
+  content: 'Middle Name: ';
+}
+
+last-name::before {
+  content: 'Last Name: ';
+}
+
+preferred-name::before {
+  content: 'Preferred Name: ';
+}
+
+studentID::before {
+  content: 'Student ID: ';
+}
+
+email::before {
+  content: 'Email: ';
+}
+
+phone::before {
+  content: 'Phone Number: ';
+}
+
+academic-status::before {
+  content: 'Academic Status: ';
+}
+
+GPA::before {
+  content: 'GPA: ';
+}
+
+major::before {
+  content: 'Major: ';
+}
+
+minor::before {
+  content: 'Minor: ';
+}
+
+enrollment-status::before {
+  content: 'Enrollment Status: ';
+}
+
+advisor::before {
+  content: 'Advisor: ';
+}
+
+initial-enrollment-date::before {
+  content: 'Initial Enrollment Date: ';
+}
+
+graduation-date::before {
+  content: 'Graduation Date: ';
+}

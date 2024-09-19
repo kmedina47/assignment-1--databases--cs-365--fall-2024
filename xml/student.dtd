@@ -1,0 +1,34 @@
+<!-- ===================================================================
+  The student-information element is the root element of the student
+  database and must contain one or more student elements. This is
+  evident with the placement of the + metacharacter after (student).
+
+  Note: This element does not allow for parsed character data nor simple
+  character data.
+  ================================================================== -->
+<!ELEMENT student-information (student)+>  <!-- student-information is the root element -->
+
+<!-- ===================================================================
+  Note: The ? metacharacter associated with the 'middle-name' and
+  'preferred-name' elements represents the optional characteristic of
+  these particular elements.
+  ================================================================== -->
+<!ELEMENT student                 (first-name,middle-name?,last-name,preferred-name?,studentID,email,phone,academic-status,GPA,major,minor,enrollment-status,advisor,initial-enrollment-date,graduation-date)> <!-- contains all the parsed character data associated with the 'student' element -->
+<!ELEMENT first-name              (#PCDATA)> <!-- The student's first name is required -->
+<!ELEMENT middle-name             (#PCDATA)> <!-- The student's middle name is optional -->
+<!ELEMENT last-name               (#PCDATA)> <!-- The student's last name is required -->
+<!ELEMENT preferred-name          (#PCDATA)> <!-- The student's preferred name is optional -->
+<!ELEMENT studentID               (#PCDATA)> <!-- The student's student ID is required -->
+<!ELEMENT email                   (#PCDATA)> <!-- The student's email address is required -->
+<!ELEMENT phone                   (#PCDATA)> <!-- The student's phone number is required -->
+<!ELEMENT academic-status         (#PCDATA)> <!-- The student's academic-status is required -->
+<!ELEMENT GPA                     (#PCDATA)> <!-- The student's GPA is required -->
+<!ELEMENT major                   (#PCDATA)> <!-- The student's major is required -->
+<!ELEMENT minor                   (#PCDATA)> <!-- The student's minor is required -->
+<!ELEMENT enrollment-status       (#PCDATA)> <!-- The student's enrollment status is required -->
+<!ELEMENT advisor                 (#PCDATA)> <!-- The student's advisor name is required -->
+<!ELEMENT initial-enrollment-date (#PCDATA)> <!-- The student's initial enrollment date is required -->
+<!ELEMENT graduation-date         (#PCDATA)> <!-- The student's graduation date is required -->
+
+<!ATTLIST student
+          name CDATA #REQUIRED> <!-- The 'student' element has the 'name' attribute, which is required and contains character data. -->
